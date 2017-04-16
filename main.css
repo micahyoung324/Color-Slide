@@ -1,3 +1,8 @@
+* {
+	color: white;
+	font-family: Arial;
+}
+
 body {
 	background-color: #346;
 }
@@ -18,31 +23,28 @@ body {
 }
 
 #goal-wrapper {
-	position: relative;
 	float: left;
-	width: 160px;
-	height: 400px;
+	height: 300px;
 }
 
 #goal {
 	background-color: #44494F;
+	padding: 10px;
+	text-align: center;
 	border-radius: 10px;
-	padding: 1px 20px 0 20px;
 	width: 160px;
 	height: 225px;
 	box-shadow: 0px 10px 10px #223;
-	color: white;
 }
 
 #goal h3 {
 	font-size: 40px;
 	font-weight: 600;
-	margin-bottom: 5px;
+	margin-bottom: 1px;
 }
 
-#goal hr {
-	margin-top: 0;
-	padding: 0;
+#goal-grid {
+	margin: 0 auto;
 }
 
 #game-grid {
@@ -51,16 +53,38 @@ body {
 	border-radius: 20px;
 	width: 450px;
 	height: 450px;
-	padding: 15px 15px;
 	box-shadow: 0px 20px 30px #223;
 }
 
 #YouWin {
-	position: absolute;
 	font-size: 120px;
 	color: #0F0;
-	width: 160px;
-	bottom: 0;
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 150px;
+	margin: 50px auto 0 auto;
+}
+
+#touch-control {
+	max-width: 800px;
+	height: 300px;
+	margin: 10px auto;
+	border-spacing: 8px 8px;
+}
+
+.table {
+	display: table;
+}
+
+.row {
+	display: table-row;
+	width: 100px;
+}
+
+.cell {
+	display: table-cell;
 }
 
 #instruction {
@@ -80,15 +104,36 @@ body {
 [id^=cell] {
 	width: 140px;
 	height: 140px;
-	float: left;
 	border: 6px #44494F solid;
 }
 
 [id^=target] {
 	width: 40px;
 	height: 40px;
-	float: left;
 	border: 2px #44494F solid;
+}
+
+[id$=Button] {
+	width: 150px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select:none;
+	user-select:none;
+	-o-user-select:none;
+	cursor: pointer;
+	background-color: #44494F;
+	border-radius: 20px;
+	box-shadow: 0px 5px 5px #223;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 90px;
+	font-size: 60px;
+	font-weight: bold;
+	margin: 10px;
+}
+
+#Reset-Button {
+	font-size: 20px;
 }
 
 #target1 {

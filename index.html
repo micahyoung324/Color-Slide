@@ -7,7 +7,6 @@
 	<title>!9#</title>
 	<link rel="shortcut icon" href="favicon.ico" />
 	<meta name="Micah Wood" content="!9#">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="main.js"></script>
@@ -21,30 +20,60 @@
 			<div id="goal">
 				<h3 class="text-center">GOAL</h3>
 				<hr>
-				<div id="goal-grid">
-					<div id="target1" class="col-sm-4" style="background-color:#222;"></div>
-					<div id="target2" class="col-sm-4" style="background-color:#222;"></div>
-					<div id="target3" class="col-sm-4" style="background-color:#222;"></div>
-					<div id="target4" class="col-sm-4" style="background-color:#222;"></div>
-					<div id="target5" class="col-sm-4" style="background-color:#222;"></div>
-					<div id="target6" class="col-sm-4" style="background-color:#222;"></div>
-					<div id="target7" class="col-sm-4" style="background-color:#222;"></div>
-					<div id="target8" class="col-sm-4" style="background-color:#222;"></div>
-					<div id="target9" class="col-sm-4" style="background-color:#222;"></div>
+				<div id="goal-grid" class="table">
+					<div class="row">
+						<div id="target1" class="cell" style="background-color:#222;"></div>
+						<div id="target2" class="cell" style="background-color:#222;"></div>
+						<div id="target3" class="cell" style="background-color:#222;"></div>
+					</div>
+					<div class="row">
+						<div id="target4" class="cell" style="background-color:#222;"></div>
+						<div id="target5" class="cell" style="background-color:#222;"></div>
+						<div id="target6" class="cell" style="background-color:#222;"></div>
+					</div>
+					<div class="row">
+						<div id="target7" class="cell" style="background-color:#222;"></div>
+						<div id="target8" class="cell" style="background-color:#222;"></div>
+						<div id="target9" class="cell" style="background-color:#222;"></div>
+					</div>
 				</div>
 			</div>
 			<h1 id="YouWin" class="text-center" style="visibility: hidden;">&#10004;</h1>
 		</div>
-		<div id="game-grid">
-			<div id="cell1" class="col-md-4" style="background-color:#222;"></div>
-			<div id="cell2" class="col-md-4" style="background-color:#222;"></div>
-			<div id="cell3" class="col-md-4" style="background-color:#222;"></div>
-			<div id="cell4" class="col-md-4" style="background-color:#222;"></div>
-			<div id="cell5" class="col-md-4" style="background-color:#222;"></div>
-			<div id="cell6" class="col-md-4" style="background-color:#222;"></div>
-			<div id="cell7" class="col-md-4" style="background-color:#222;"></div>
-			<div id="cell8" class="col-md-4" style="background-color:#222;"></div>
-			<div id="cell9" class="col-md-4" style="background-color:#222;"></div>
+		<div id="game-grid" class="table">
+			<div class="row">
+				<div id="cell1" class="cell" style="background-color:#222;"></div>
+				<div id="cell2" class="cell" style="background-color:#222;"></div>
+				<div id="cell3" class="cell" style="background-color:#222;"></div>
+			</div>
+			<div class="row">
+				<div id="cell4" class="cell" style="background-color:#222;"></div>
+				<div id="cell5" class="cell" style="background-color:#222;"></div>
+				<div id="cell6" class="cell" style="background-color:#222;"></div>
+			</div>
+			<div class="row">
+				<div id="cell7" class="cell" style="background-color:#222;"></div>
+				<div id="cell8" class="cell" style="background-color:#222;"></div>
+				<div id="cell9" class="cell" style="background-color:#222;"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="touch-control" class="table">
+		<div class="row">
+			<div class="cell" id="CounterClockWise-Button" onclick="move(rotateCounterClockwise)">&circlearrowleft;</div>
+			<div class="cell" id="Up-Button" onclick="move(slideUp)">&uparrow;</div>
+			<div class="cell" id="ClockWise-Button" onclick="move(rotateClockwise)">&circlearrowright;</div>
+		</div>
+		<div class="row">
+			<div class="cell" id="Left-Button" onclick="move(slideLeft)">&leftarrow;</div>
+			<div class="cell" id="Down-Button" onclick="move(slideDown)">&downarrow;</div>
+			<div class="cell" id="Right-Button" onclick="move(slideRight)">&rightarrow;</div>
+		</div>
+		<div class="row">
+			<div class="cell"></div>
+			<div class="cell" id="Reset-Button" onclick="reset()">New Game</div>
+			<div class="cell"></div>
 		</div>
 	</div>
 
@@ -79,6 +108,9 @@
 		<div class="text-center">
 			New game: Enter
 		</div>
+	</div>
+	<div id="difficult">
+
 	</div>
 
 </body>
