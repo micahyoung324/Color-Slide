@@ -22,8 +22,9 @@ function reset() {
 	document.getElementById('YouWin').style.visibility = "hidden";
 	var color;
 	var colors = [
-		defColor, defColor, defColor, defColor, defColor, defColor, defColor, defColor,
-		blue
+		defColor, defColor, defColor, defColor, defColor, defColor,
+		blue, blue, blue, blue,
+		red, red, red, red
 	];
 	colors = shuffle(colors);
 	console.log(colors);
@@ -36,16 +37,13 @@ function reset() {
 }
 
 function move(grid) {
-	if (!disable) {
-		var color = [];
-		for (var i = 0; i < 9; i++) {
-			color.push(document.getElementById('cell' + grid[i]).style.backgroundColor);
-		}
+	var color = [];
+	for (var i = 0; i < 9; i++) {
+		color.push(document.getElementById('cell' + grid[i]).style.backgroundColor);
+	}
 
-		for (var i = 0; i < 9; i++) {
-			document.getElementById('cell' + defaultGrid[i]).style.backgroundColor = color[i];
-		}
-		isWinner(check());
+	for (var i = 0; i < 9; i++) {
+		document.getElementById('cell' + defaultGrid[i]).style.backgroundColor = color[i];
 	}
 }
 
@@ -117,6 +115,7 @@ function pressed(e) {
 				break;
 		}
 	}
+	isWinner(check());
 	if (key === 13) { // Enter
 		reset();
 	}
