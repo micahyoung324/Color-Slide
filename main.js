@@ -116,7 +116,7 @@ function pressed(e) {
 		}
 	}
 	isWinner(check());
-	if (key === 13) { // Enter
+	if (key === 13 || key === 32) { // Enter OR Space
 		reset();
 	}
 }
