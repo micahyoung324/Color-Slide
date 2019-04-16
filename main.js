@@ -27,7 +27,6 @@ function reset() {
 		red, red, red, red
 	];
 	colors = shuffle(colors);
-	console.log(colors);
 	var newpuzzle = secretmove();
 	for (var i = 0; i < 9; i++) {
 		color = colors.pop();
@@ -115,8 +114,10 @@ function pressed(e) {
 				break;
 		}
 	}
+    
 	isWinner(check());
-	if (key === 13 || key === 32) { // Enter OR Space
+	
+    if (key === 13 || key === 32) { // Enter OR Space
 		reset();
 	}
 }
