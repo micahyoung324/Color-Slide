@@ -75,7 +75,7 @@ function secretmove() {
 	return grid;
 }
 
-function check() {
+function isWinner() {
 	for (var i = 0; i < 9; i++) {
 		if (document.getElementById('cell' + defaultGrid[i]).style.backgroundColor !== document.getElementById('target' + defaultGrid[i]).style.backgroundColor)
 			return false;
@@ -83,11 +83,9 @@ function check() {
 	return true;
 }
 
-function isWinner(bool) {
-	if (bool) {
-		document.getElementById('YouWin').style.visibility = "visible";
-		disable = true;
-	}
+function displayWin() {
+	document.getElementById('YouWin').style.visibility = "visible";
+	disable = true;
 }
 
 function pressed(e) {
@@ -115,7 +113,9 @@ function pressed(e) {
 		}
 	}
     
-	isWinner(check());
+	if (isWinner()) {
+		displayWin();
+	}
 	
     if (key === 13 || key === 32) { // Enter OR Space
 		reset();
