@@ -3,7 +3,7 @@ body {
 }
 
 #title {
-	margin: 20px auto 20px auto;
+	margin: 20px auto;
 	font-size: 60px;
 	color: white;
 	font-family: Arial;
@@ -27,10 +27,10 @@ body {
 #goal {
 	background-color: #44494F;
 	border-radius: 10px;
-	padding: 1px 20px 0 20px;
+	padding: 1px 20px 0;
 	width: 160px;
 	height: 225px;
-	box-shadow: 0px 10px 10px #223;
+	box-shadow: 0 10px 10px #223;
 	color: white;
 }
 
@@ -51,8 +51,8 @@ body {
 	border-radius: 20px;
 	width: 450px;
 	height: 450px;
-	padding: 15px 15px;
-	box-shadow: 0px 20px 30px #223;
+	padding: 15px;
+	box-shadow: 0 20px 30px #223;
 }
 
 #YouWin {
@@ -67,9 +67,9 @@ body {
 	background-color: #44494F;
 	border-radius: 10px;
 	margin: 0 auto;
-	padding: 1px 20px 20px 20px;
+	padding: 1px 20px 20px;
 	width: 600px;
-	box-shadow: 0px 10px 10px #223;
+	box-shadow: 0 10px 10px #223;
 	color: white;
 }
 
