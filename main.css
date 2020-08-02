@@ -11,8 +11,8 @@ body {
 }
 
 #gameContainer {
-	width: 650px;
-	height: 500px;
+	width: 850px;
+	height: 600px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -49,8 +49,8 @@ body {
 	float: right;
 	background-color: #44494F;
 	border-radius: 20px;
-	width: 450px;
-	height: 450px;
+	width: 650px;
+	height: 650px;
 	padding: 15px;
 	box-shadow: 0 20px 30px #223;
 }
@@ -63,23 +63,27 @@ body {
 	bottom: 0;
 }
 
-#instruction {
+.info {
 	background-color: #44494F;
 	border-radius: 10px;
-	margin: 0 auto;
+	margin: 20px auto;
 	padding: 1px 20px 20px;
 	width: 600px;
 	box-shadow: 0 10px 10px #223;
 	color: white;
 }
 
-#instruction h3 {
+.info h3 {
 	font-weight: bold;
 }
 
+.info p {
+	text-indent: 2em;
+}
+
 [id^=cell] {
-	width: 140px;
-	height: 140px;
+	width: 206px;
+	height: 206px;
 	float: left;
 	border: 6px #44494F solid;
 }
