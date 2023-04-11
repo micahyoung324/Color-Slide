@@ -1,3 +1,3 @@
 # Color-Slide
 
-https://mxw7265.github.io/Color-Slide/
+https://micahyoung324.github.io/Color-Slide/
